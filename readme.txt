@@ -1,0 +1,5 @@
+Buat kirim commit usahain kasih format kayak gini "<Nama> | <Perubahan>"
+Contoh commit: Harmoni | Penambahan Readme
+
+List Anggota:
+- Harmoni Natanael Simatupang | 2406261
