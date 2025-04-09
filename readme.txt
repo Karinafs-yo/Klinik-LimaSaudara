@@ -3,3 +3,4 @@ Contoh commit: Harmoni | Penambahan Readme
 
 List Anggota:
 - Harmoni Natanael Simatupang | 2406261
+- Rifdah Mahirah | 2402870
