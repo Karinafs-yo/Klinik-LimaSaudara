@@ -106,9 +106,9 @@ void antrianBaru()
 
 void TampilkanObat()
 {
-    for (int i = 0; i < 50; i++)
+    for (int i = 0; i < sizeof(obat) / sizeof(obat[0]); i++)
     {
-        cout << obat[i] << " " << harga[i] << " " << stok[i] << endl;
+        cout << obat[i] << "\t" << harga[i] << "\t" << stok[i] << endl;
     }
 }
 
