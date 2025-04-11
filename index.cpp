@@ -6,7 +6,7 @@ struct antrian {
     string no_antrian;
     string nama_pasien;
     string keluhan;
-    bool status;
+    bool isbpjs;
     string resep_obat[10][3];
     antrian *next, *prev;
 };
@@ -15,15 +15,15 @@ struct history {
     string no_antrian;
     string nama_pasien;
     string keluhan;
-    bool status;
+    bool isbpjs;
     string resep_obat[10][3];
     history *next, *prev;
 };
 
-string obat[];
-double harga;
-int stok, jumlah_obat = 0, no_antrian_BPJS = 0, no_antrian_general = 0;
+int jumlah_obat = 0, no_antrian_BPJS = 0, no_antrian_general = 0;
 antrian *head_bpjs = NULL, *tail_bpjs = NULL, *head_general = NULL, *tail_general = NULL;
+
+history *head_history = NULL, *tail_history = NULL;
 
 string obat[50] = {
     "Paracetamol", "Amoxicillin", "Ibuprofen", "Vitamin C", "Antasida",
@@ -62,8 +62,7 @@ int stok[50] = {
     50, 52, 49, 47, 45,
     85, 87, 78, 74, 90,
     65, 55, 62, 59, 73
-}, jumlah_obat = 0;
-antrian *head_bpjs = NULL;
+};
 
 //? Function
 void antrianBaru()
@@ -113,8 +112,57 @@ void TampilkanObat()
     }
 }
 
+void tampilkanInvoice(history *temp)
+{
+    cout << "=========== Antrian " << temp -> no_antrian << "==============" << endl;
+    cout << "Nama Pasien: " << temp -> nama_pasien << endl;
+    cout << "Keluhan: " << temp -> keluhan << endl;
+    cout << "Resep: " << endl;
+    cout << "" << endl;
+    for (int i = 0; i < 10; i++)
+    {
+        if (temp -> resep_obat[i][0] != "")
+        {
+            cout << temp -> resep_obat[i][0] << " - " << temp -> resep_obat[i][1] << endl;
+        }
+    }
+    cout << "=============" << (temp -> isbpjs ? "BPJS" : "PRIORITAS") << "============"  << endl;
 
+}
+
+void dummydata()
+{
+    antrian *newAntrian = new antrian;
+    newAntrian -> no_antrian = "A0";
+    newAntrian -> nama_pasien = "Dummy";
+    newAntrian -> keluhan = "Dummy";
+    newAntrian -> isbpjs= false;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 3; j++) {
+            newAntrian->resep_obat[i][j] = "Dummy";
+        }
+    }
+    head_bpjs = newAntrian;
+    tail_bpjs = newAntrian;
+
+    history *newHistory = new history;
+    newHistory -> no_antrian = "B0";
+    newHistory -> nama_pasien = "Dummy";
+    newHistory -> keluhan = "Dummy";
+    newHistory -> isbpjs= false;
+    head_history = newHistory;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 3; j++) {
+            newHistory->resep_obat[i][j] = "Dummy";
+        }
+    }
+
+    tail_history = newHistory;
+}
 
 int main(){
-TampilkanObat();
+    dummydata();
+    tampilkanInvoice(head_history);
+
 }
+
