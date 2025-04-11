@@ -7,7 +7,7 @@ struct antrian {
     string nama_pasien;
     string keluhan;
     bool status;
-    string resep_obat[5][10];
+    string resep_obat[10][3];
     antrian *next, *prev;
 };
 
