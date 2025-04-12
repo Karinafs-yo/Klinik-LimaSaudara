@@ -7,3 +7,7 @@ List Anggota:
 - Rifdah Mahirah | 2402870
 - Karina Fauzia Setiadi | 2402838
 - Nabila Ayla Putri | 2402807
+
+Sebelum Commit:
+1. Pull dulu, selesain conflictnya kalau ada
+2. Kalau ngejalanin make dan ada file .o, jalanin "make clean"
