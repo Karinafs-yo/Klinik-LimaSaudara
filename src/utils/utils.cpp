@@ -1,5 +1,7 @@
 #include "utils.hpp"
+#include <cstdlib>
 #include "structs.hpp"
+using namespace std;
 
 void createDummy(){
     antrian *newAntrian = new antrian;
@@ -29,3 +31,6 @@ void createDummy(){
 
     tail_history = newHistory;
 }
+
+void clearTerminal(){ system("cls"); }
+int lengthStringArray(string  array[10][3]){ return sizeof(array) / sizeof(string); }

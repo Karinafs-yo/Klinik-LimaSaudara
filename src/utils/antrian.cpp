@@ -39,3 +39,9 @@ void createAntrian()
     }
     cout << "No Antrian: " << newAntrian->no_antrian << endl;
 }
+
+antrian* findLastAntrian(){
+    if (head_prioritas != NULL) return head_prioritas;
+    if (head_bpjs != NULL) return head_bpjs;
+    return NULL;
+}

@@ -6,5 +6,6 @@
 using namespace std;
 
 void createAntrian();
+antrian findLastAntrian();
 
 #endif
