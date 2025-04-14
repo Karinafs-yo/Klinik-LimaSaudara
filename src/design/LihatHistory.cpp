@@ -2,15 +2,27 @@
 #include "structs.hpp"
 #include "history.hpp"
 
-void d_LihatHistory(){
-    while{
+void d_LihatHistory(history *temp){
 
-    }
-    formatInvoice(tail_history);
+    if(temp != NULL) temp = tail_history;
+    formatInvoice(temp);
+
     cout << endl;
     cout << "┌───────────────────────────────────────────────────────────────┐";
-    cout << "|  1. ⏭️ - Next                                                 |";
-    cout << "|  2. ⏮️ - Back                                                 |";
+    cout << "|  N. ⏭️ - Next                                                 |";
+    cout << "|  B. ⏮️ - Back                                                 |";
     cout << "└───────────────────────────────────────────────────────────────┘";
-    cout << "\nSelect a feature"
+    while(true){
+        cout << "\nSelect a feature? "; int confirmation;cin >> confirmation;
+        switch (confirmation) {
+            case 1:
+                if(temp->prev == NULL) break;
+                return d_LihatHistory(temp->next);
+            break;
+            default:
+                if(temp->prev == NULL) break;
+                return d_LihatHistory(temp->prev);
+            break;
+        }
+    }
 }

@@ -6,20 +6,21 @@
 void d_LayaniAntrian()
 {
     antrian *temp  = new antrian();
-    *temp = findLastAntrian();
-    cout << endl;
+    temp = findLastAntrian();
+
     cout << "┌───────────────────────────────────────────────────────────────┐";
     cout << "               Layani Antrian ke-" << temp->no_antrian;
     cout << "   👤Nama      : "; cin >> temp -> nama_pasien;
     cout << "   😣Keluhan   : "; cin >> temp -> keluhan;
     cout << "   📃Resep     : \n";
-    if(lengthArrayString(temp->resep_obat) < 1){
+    if((sizeof(temp->resep_obat) / sizeof(temp->resep_obat[0])) < 1){
         //tambah Obat
     }else {
-        for(int i = 0; i < lengthArrayString(temp->resep_obat); i++){
-            for (int i = 0; )
+        for(int i = 0; i < 10; i++){
+            for (int y = 0; y < 3; y++){
+
+            }
         }
-    cout << "   ";
-    }
+    cout << "   ";}
     cout << "└───────────────────────────────────────────────────────────────┘";
 }

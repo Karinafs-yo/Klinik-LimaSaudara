@@ -1,5 +1,7 @@
 #include "utils.hpp"
 #include <cstdlib>
+#include <thread>
+#include <chrono>
 #include "structs.hpp"
 using namespace std;
 
@@ -32,5 +34,32 @@ void createDummy(){
     tail_history = newHistory;
 }
 
+void loadingMenu(string menuName){
+    int repeatFor = 3;
+    for(int i = 0; i < repeatFor; i++){
+        cout << "┌───────────────────────────────────────────────────────────────┐";
+        cout << "                   ";
+        cout << "                   " << menuName << ".";
+        cout << "                   ";
+        cout << "└───────────────────────────────────────────────────────────────┘";
+        this_thread::sleep_for(chrono::milliseconds(300));
+        clearTerminal();
+        cout << "┌───────────────────────────────────────────────────────────────┐";
+        cout << "                   ";
+        cout << "                   " << menuName << "..";
+        cout << "                   ";
+        cout << "└───────────────────────────────────────────────────────────────┘";
+        this_thread::sleep_for(chrono::milliseconds(300));
+        clearTerminal();
+        cout << "┌───────────────────────────────────────────────────────────────┐";
+        cout << "                   ";
+        cout << "                   " << menuName << "...";
+        cout << "                   ";
+        cout << "└───────────────────────────────────────────────────────────────┘";
+        this_thread::sleep_for(chrono::milliseconds(300));
+        clearTerminal();
+    }
+}
+
 void clearTerminal(){ system("cls"); }
-int lengthStringArray(string  array[10][3]){ return sizeof(array) / sizeof(string); }
+// int lengthStringArray(string  temp[10][3]){ return sizeof(temp) / sizeof(temp[0]); }

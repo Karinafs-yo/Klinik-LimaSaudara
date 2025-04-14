@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+void clearTerminal();
+void loadingMenu(string menuName);
 void createDummy();
 int lengthArrayString(string array[10][3]);
 
