@@ -25,6 +25,7 @@ void d_MenuUtama(){
     cout << "|  2 - Layani Antrian Baru                                      |" << endl;
     cout << "|  3 - Lihat History                                            |" << endl;
     cout << "|  4 - Lihat Obat                                               |" << endl;
+    cout << "|  5 - Keluar Program                                           |" << endl;
     cout << "-----------------------------------------------------------------" << endl;
     cout << "Pilih Fitur? "; int confirmation; cin >> confirmation;
 
@@ -42,9 +43,12 @@ void d_MenuUtama(){
         loadingMenu("Lihat History");
         d_LihatHistory(NULL);
         break;
-    default:
+    case 4:
         loadingMenu("Lihat Obat");
         d_LihatObat();
         break;
+    default:
+        loadingMenu("Exiting Program");
+        return;
     }
 }
