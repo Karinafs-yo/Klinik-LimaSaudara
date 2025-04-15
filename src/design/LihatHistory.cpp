@@ -18,6 +18,7 @@ void d_LihatHistory(history *temp)
     cout << "-----------------------------------------------------------------" << endl;
     cout << "|  1 - Maju List                                                 |" << endl;
     cout << "|  2 - Mundur List                                               |" << endl;
+    cout << "|  3 - Kembali ke Menu Utama                                               |" << endl;
     cout << "-----------------------------------------------------------------" << endl;
     while (true)
     {
@@ -28,9 +29,13 @@ void d_LihatHistory(history *temp)
             if (temp->next != NULL) return d_LihatHistory(temp->next);
             clearOneLine();
         break;
-            default:
+        case 2:
             if (temp->prev != NULL) return d_LihatHistory(temp->prev);
             clearOneLine();
+        break;
+        default:
+            clearTerminal();
+            d_MenuUtama();
         break;
         }
     }
