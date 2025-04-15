@@ -9,10 +9,10 @@ void d_MenuUtama(){
     antrian *temp = findLastAntrian();
     string firstLine = "", secondLine = "", thirdLine = "";
     while(temp != NULL){
-        firstLine += "  -------";
-        secondLine +="  |  " + temp ->no_antrian + " |";
-        thirdLine += "  -------";
-        temp = temp -> next;
+        firstLine += "  ------";
+        secondLine +="  | " + temp->no_antrian + " |";
+        thirdLine += "  ------";
+        temp = temp->next;
     }
 
     cout << firstLine << endl << secondLine << endl << thirdLine;
