@@ -6,11 +6,15 @@ using namespace std;
 
 void d_MenuUtama(){
     createDummy();
+    cout << "------" << endl;
+    cout << "| " << findLastAntrian() << " |" << endl;
+    cout << "------" << endl;
+    cout << endl;
     cout << "-----------------------------------------------------------------" << endl;
-    cout << "|  1 - Buat Antrian Baru                                         |" << endl;
-    cout << "|  2 - Layani Antrian Baru                                       |" << endl;
-    cout << "|  3 - Lihat History                                             |" << endl;
-    cout << "|  4 - Lihat Obat                                                |" << endl;
+    cout << "|  1 - Buat Antrian Baru                                        |" << endl;
+    cout << "|  2 - Layani Antrian Baru                                      |" << endl;
+    cout << "|  3 - Lihat History                                            |" << endl;
+    cout << "|  4 - Lihat Obat                                               |" << endl;
     cout << "-----------------------------------------------------------------" << endl;
     cout << "Pilih Fitur? "; int confirmation; cin >> confirmation;
 
