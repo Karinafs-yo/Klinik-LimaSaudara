@@ -10,7 +10,7 @@ void d_LayaniAntrian()
 
     cout << "-----------------------------------------------------------------" << endl;
     cout << "               Layani Antrian ke-" << temp->no_antrian << endl;
-    cout << "   Nama      : "; cin >> temp -> nama_pasien; cout << endl;
+    cout << "   Nama      : "; if (temp->nama_pasien != ""){ cout << temp->nama_pasien; } else { cin >> temp -> nama_pasien; } cout << endl;
     cout << "   Keluhan   : "; cin >> temp -> keluhan; cout << endl;
     cout << "   Resep     : \n";
     if(temp->banyak_resep < 1){
