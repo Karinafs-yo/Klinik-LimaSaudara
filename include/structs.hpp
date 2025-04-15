@@ -9,6 +9,7 @@ struct antrian {
     string nama_pasien;
     string keluhan;
     bool is_bpjs;
+    int banyak_resep = 0;
     string resep_obat[10][3];
     antrian *next, *prev;
 };
