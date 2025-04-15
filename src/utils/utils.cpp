@@ -7,20 +7,14 @@ using namespace std;
 
 void createDummy(){
     antrian *newAntrian = new antrian;
-    newAntrian -> no_antrian = "A0";
-    newAntrian -> nama_pasien = "Dummy";
-    newAntrian -> keluhan = "Dummy";
+    newAntrian -> no_antrian = "A1";
     newAntrian -> is_bpjs= false;
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 3; j++) {
-            newAntrian->resep_obat[i][j] = "Dummy";
-        }
-    }
     head_bpjs = newAntrian;
     tail_bpjs = newAntrian;
+    antrian_prioritas++;
 
     history *newHistory = new history;
-    newHistory -> no_antrian = "B0";
+    newHistory -> no_antrian = "B1";
     newHistory -> nama_pasien = "Dummy";
     newHistory -> keluhan = "Dummy";
     newHistory -> is_bpjs= false;
@@ -31,6 +25,7 @@ void createDummy(){
         }
     }
     head_history = newHistory;
+    antrian_bpjs++;
     
     history *newSecondHistory = new history;
     newSecondHistory -> no_antrian = "B1";
@@ -47,6 +42,7 @@ void createDummy(){
     newHistory->next = newSecondHistory;
     
     tail_history = newSecondHistory;
+    antrian_prioritas++;
 }
 
 void loadingMenu(string menuName){
@@ -58,21 +54,21 @@ void loadingMenu(string menuName){
         cout << "                   " << menuName << "." << endl;
         cout << "                   " << endl;
         cout << "-----------------------------------------------------------------" << endl;
-        // this_thread::sleep_for(chrono::milliseconds(300));
+        this_thread::sleep_for(chrono::milliseconds(100));
         clearTerminal();
         cout << "-----------------------------------------------------------------" << endl;
         cout << "                   " << endl;
         cout << "                   " << menuName << ".." << endl;
         cout << "                   " << endl;
         cout << "-----------------------------------------------------------------" << endl;
-        // this_thread::sleep_for(chrono::milliseconds(300));
+        this_thread::sleep_for(chrono::milliseconds(100));
         clearTerminal();
         cout << "-----------------------------------------------------------------" << endl;
         cout << "                   " << endl;
         cout << "                   " << menuName << "..." << endl;
         cout << "                   " << endl;
         cout << "-----------------------------------------------------------------" << endl;
-        // this_thread::sleep_for(chrono::milliseconds(300));
+        this_thread::sleep_for(chrono::milliseconds(100));
         clearTerminal();
     }
 }
