@@ -1,10 +1,9 @@
 #include "antrian.hpp"
 #include "structs.hpp"
 
-void createAntrian()
+void createAntrian(string isBPJS)
 {
-    string isBPJS;
-    cout << "BPJS = Ya / Tidak? "; cin >> isBPJS;
+    
     antrian *newAntrian = new antrian;
 
     if (isBPJS == "Ya")
