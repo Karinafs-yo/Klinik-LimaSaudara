@@ -14,7 +14,7 @@ void d_LayaniAntrian()
     cout << "   😣Keluhan   : "; cin >> temp -> keluhan;
     cout << "   📃Resep     : \n";
     if((sizeof(temp->resep_obat) / sizeof(temp->resep_obat[0])) < 1){
-        d_PilihObat();
+        //d_PilihObat();
     } else {
         for(int i = 0; i < 10; i++){
             for (int y = 0; y < 3; y++){

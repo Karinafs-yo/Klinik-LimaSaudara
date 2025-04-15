@@ -5,10 +5,12 @@
 void d_BuatAntrianBaru()
 {
     string isBPJS;
-    string no_antrian = createAntrian(isBPJS);
-
+    
     cout << "-------------------- Buat Antrian Baru --------------------" << endl;
     cout << "BPJS (Ya/Tidak) = "; cin >> isBPJS;
+    
+    string no_antrian = createAntrian(isBPJS);
+
     cout << "No Antrian: " << no_antrian; cout << endl;
     cout << "-----------------------------------------------------------" << endl;
     cout << "-------------- Nomor Antrian Berhasil Dibuat! -------------" << endl;
@@ -21,5 +23,4 @@ void d_BuatAntrianBaru()
     {
         cout << "Selesai Membuat Nomor Antrian!" << endl;
     }
-    cout << "-----------------------------------------------------------" << endl;
 }
