@@ -13,7 +13,7 @@ void d_BuatAntrianBaru()
     string no_antrian = createAntrian(isBPJS);
 
     cout << "No Antrian: " << no_antrian; cout << endl;
-    cout << "-----------------------------------------------------------" << endl;
+    cout << "-----------------------------------------------------------" << endl << endl;
     cout << "-------------- Nomor Antrian Berhasil Dibuat! -------------" << endl;
     cout << "Apakah ingin membuat antrian baru lagi? (Ya/Tidak) = "; cin >> isBPJS;
     if (isBPJS == "Ya" || isBPJS == "ya")

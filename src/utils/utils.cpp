@@ -25,7 +25,6 @@ void createDummy(){
         }
     }
     head_history = newHistory;
-    antrian_bpjs++;
     
     history *newSecondHistory = new history;
     newSecondHistory -> no_antrian = "B1";
@@ -42,7 +41,6 @@ void createDummy(){
     newHistory->next = newSecondHistory;
     
     tail_history = newSecondHistory;
-    antrian_prioritas++;
 }
 
 void loadingMenu(string menuName){

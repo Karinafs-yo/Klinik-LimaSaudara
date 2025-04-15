@@ -6,9 +6,19 @@ using namespace std;
 
 void d_MenuUtama(){
     clearTerminal();
-    cout << "------" << endl;
-    cout << "| " << findLastAntrian() << " |" << endl;
-    cout << "------" << endl;
+    antrian *temp = findLastAntrian();
+    string firstLine = "", secondLine = "", thirdLine = "";
+    //?Tolong perbaiki ini 😑
+    // while(true){
+    //     cout << temp -> no_antrian;
+    //     firstLine += "-----";
+    //     secondLine +="|  " + temp ->no_antrian + " |";
+    //     thirdLine += "-----";
+    //     temp = temp -> next;
+    // }
+
+    cout << firstLine << endl << secondLine << endl << thirdLine;
+
     cout << endl;
     cout << "-----------------------------------------------------------------" << endl;
     cout << "|  1 - Buat Antrian Baru                                        |" << endl;

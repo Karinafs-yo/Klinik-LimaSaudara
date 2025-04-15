@@ -23,22 +23,23 @@ void d_PilihObat(antrian *temp)
     {
         cout << "Masukkan Nama Obat? "; cin >> input_obat;
         index_obat = cariObat(input_obat);
-        if(index_obat >= 0) obatFinded = true;
+        if(index_obat >= 0){ obatFinded = true;
+        } else clearOneLine();
     }
     
-    cout << "Nama Obat: " << input_obat << endl;
+    cout << "\nNama Obat: " << input_obat << endl;
     cout << "Stok Obat: " << stok[index_obat] << endl;
-    cout << "Harga Obat: " << harga[index_obat] << endl;
+    cout << "Harga Obat: " << harga[index_obat] << endl << endl;
 
     cout << "Banyak Pembelian? "; cin >> input_pembelian;
-    double total_harga = input_pembelian * harga[index_obat];
+    int total_harga = input_pembelian * harga[index_obat];
     cout << "Total Harga: " << total_harga << endl;
     temp -> resep_obat[temp -> banyak_resep][0] = input_obat;
     temp -> resep_obat[temp -> banyak_resep][1] = to_string(input_pembelian);
     temp -> resep_obat[temp -> banyak_resep][2] = to_string(total_harga);
     temp -> banyak_resep++;
 
-    cout << "Lanjut (y/n): "; string konfirmasi; cin >> konfirmasi;
+    cout << "\nLanjut Mengisi? (y/n): "; string konfirmasi; cin >> konfirmasi;
     if (konfirmasi == "y"){
         d_PilihObat(temp);
     }else{

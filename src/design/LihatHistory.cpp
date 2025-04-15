@@ -10,15 +10,15 @@ void d_LihatHistory(history *temp)
 
     cout << "-----------------------------------------------------------------" << endl;
     cout << "   No Antrian      : " << temp->no_antrian << endl;
-    cout << "   Antrian " << (temp->is_bpjs ? "BPJS" : "Prioritas") << endl;
+    cout << "   Antrian         : " << (temp->is_bpjs ? "BPJS" : "Prioritas") << endl;
     cout << "   Nama Pasien     : " << temp->nama_pasien << endl;
-    cout << "   Keluhan Pasien  : " << temp->keluhan << endl;
+    cout << "   Keluhan Pasien  : " << temp->keluhan << endl << endl;
     cout << "   Resep Obat: " << endl;
     for (int i = 0; i < temp->banyak_resep; i++) cout << "   " << i + 1 << ". " << temp->resep_obat[i][0] << "(" << temp->resep_obat[i][1] << ")         Rp. " << temp->resep_obat[i][2] << endl;
     cout << "-----------------------------------------------------------------" << endl;
     cout << "|  1 - Maju List                                                 |" << endl;
     cout << "|  2 - Mundur List                                               |" << endl;
-    cout << "|  3 - Kembali ke Menu Utama                                               |" << endl;
+    cout << "|  3 - Kembali ke Menu Utama                                     |" << endl;
     cout << "-----------------------------------------------------------------" << endl;
     while (true)
     {
