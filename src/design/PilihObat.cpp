@@ -35,7 +35,7 @@ void d_PilihObat(antrian *temp)
     cout << "Total Harga: " << total_harga << endl;
     temp -> resep_obat[temp -> banyak_resep][0] = input_obat;
     temp -> resep_obat[temp -> banyak_resep][1] = to_string(input_pembelian);
-    temp -> resep_obat[temp -> banyak_resep][2] = total_harga;
+    temp -> resep_obat[temp -> banyak_resep][2] = to_string(total_harga);
     temp -> banyak_resep++;
 
     cout << "Lanjut (y/n): "; string konfirmasi; cin >> konfirmasi;
