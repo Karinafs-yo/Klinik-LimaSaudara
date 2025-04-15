@@ -47,6 +47,7 @@ void loadingMenu(string menuName){
         cout << "┌───────────────────────────────────────────────────────────────┐";
         cout << "                   ";
         cout << "                   " << menuName << "..";
+        
         cout << "                   ";
         cout << "└───────────────────────────────────────────────────────────────┘";
         this_thread::sleep_for(chrono::milliseconds(300));

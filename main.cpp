@@ -5,13 +5,13 @@ using namespace std;
 
 int main()
 {
-    cout << "┌───────────────────────────────────────────────────────────────┐";
-    cout << "|  1. 👥 - Buat Antrian Baru                                    |";
-    cout << "|  2. 👤 - Layani Antrian Baru                                  |";
-    cout << "|  3. ⏰ - Lihat History                                        |";
-    cout << "|  4. 💊 - Lihat Obat                                           |";
-    cout << "└───────────────────────────────────────────────────────────────┘";
-    cout << "\nSelect a feature? "; int confirmation; cin >> confirmation;
+    cout << "-----------------------------------------------------------------" << endl;
+    cout << "|  1 - Buat Antrian Baru                                    |" << endl;
+    cout << "|  2 - Layani Antrian Baru                                  |" << endl;
+    cout << "|  3 - Lihat History                                        |" << endl;
+    cout << "|  4 - Lihat Obat                                           |" << endl;
+    cout << "-----------------------------------------------------------------" << endl;
+    cout << "Pilih Fitur? "; int confirmation; cin >> confirmation;
 
     switch (confirmation)
     {
