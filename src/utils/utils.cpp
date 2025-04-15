@@ -58,21 +58,21 @@ void loadingMenu(string menuName){
         cout << "                   " << menuName << "." << endl;
         cout << "                   " << endl;
         cout << "-----------------------------------------------------------------" << endl;
-        this_thread::sleep_for(chrono::milliseconds(300));
+        // this_thread::sleep_for(chrono::milliseconds(300));
         clearTerminal();
         cout << "-----------------------------------------------------------------" << endl;
         cout << "                   " << endl;
         cout << "                   " << menuName << ".." << endl;
         cout << "                   " << endl;
         cout << "-----------------------------------------------------------------" << endl;
-        this_thread::sleep_for(chrono::milliseconds(300));
+        // this_thread::sleep_for(chrono::milliseconds(300));
         clearTerminal();
         cout << "-----------------------------------------------------------------" << endl;
         cout << "                   " << endl;
         cout << "                   " << menuName << "..." << endl;
         cout << "                   " << endl;
         cout << "-----------------------------------------------------------------" << endl;
-        this_thread::sleep_for(chrono::milliseconds(300));
+        // this_thread::sleep_for(chrono::milliseconds(300));
         clearTerminal();
     }
 }

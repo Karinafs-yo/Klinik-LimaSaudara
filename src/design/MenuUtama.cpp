@@ -5,7 +5,7 @@
 using namespace std;
 
 void d_MenuUtama(){
-    createDummy();
+    clearTerminal();
     cout << "-----------------------------------------------------------------" << endl;
     cout << "|  1 - Buat Antrian Baru                                         |" << endl;
     cout << "|  2 - Layani Antrian Baru                                       |" << endl;
