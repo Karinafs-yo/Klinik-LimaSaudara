@@ -5,6 +5,7 @@
 using namespace std;
 
 void clearTerminal();
+void clearOneLine();
 void loadingMenu(string menuName);
 void createDummy();
 

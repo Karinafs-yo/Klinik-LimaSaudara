@@ -4,8 +4,8 @@
 
 void d_PilihObat(antrian *temp)
 {
-    string input_obat
-    int input_pembelian, index_obat
+    string input_obat;
+    int input_pembelian, index_obat;
 
     cout << "-------------------------------------------------------------" << endl;
     cout << "Obat yang dibeli:                                          |" << endl;
@@ -16,7 +16,7 @@ void d_PilihObat(antrian *temp)
     }
     cout << "-------------------------------------------------------------" << endl;
     //info obat
-    bool obatFinded = false
+    bool obatFinded = false;
     while (!obatFinded)
     {
         cout << "Masukkan Nama Obat? "; cin >> input_obat;
@@ -40,6 +40,6 @@ void d_PilihObat(antrian *temp)
     if (konfirmasi == "y"){
         d_PilihObat(temp);
     }else{
-        d_LayaniAntrian(temp);
+        d_LayaniAntrian();
     }
 }
