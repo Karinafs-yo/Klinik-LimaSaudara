@@ -38,3 +38,9 @@ int stok[50] = {
     85, 87, 78, 74, 90,
     65, 55, 62, 59, 73
 };
+
+int cariObat(string namaObat) { 
+    for (int i = 0; i < 50; i++) {
+        if (obat[i] == namaObat) return i;
+    } return -1;
+}

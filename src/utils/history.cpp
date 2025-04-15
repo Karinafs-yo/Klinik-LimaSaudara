@@ -2,6 +2,7 @@
 
 void formatInvoice(history *temp)
 {
+    cout << temp -> no_antrian;
     cout << "=========== Antrian " << temp->no_antrian << "==============" << endl;
     cout << "Nama Pasien: " << temp->nama_pasien << endl;
     cout << "Keluhan: " << temp->keluhan << endl;
@@ -11,7 +12,7 @@ void formatInvoice(history *temp)
     {
         if (temp->resep_obat[i][0] != "")
         {
-            cout << temp->resep_obat[i][0] << " - " << temp->resep_obat[i][1] << endl;
+            cout << temp->resep_obat[i][0] << " - " << temp->resep_obat[i][0] << " (" << temp->resep_obat[i][1] << ")           " << temp->resep_obat[i][2] << endl;
         }
     }
     cout << "=============" << (temp->is_bpjs ? "BPJS" : "PRIORITAS") << "============" << endl;

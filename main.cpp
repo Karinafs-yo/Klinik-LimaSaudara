@@ -5,11 +5,12 @@ using namespace std;
 
 int main()
 {
+    createDummy();
     cout << "-----------------------------------------------------------------" << endl;
-    cout << "|  1 - Buat Antrian Baru                                    |" << endl;
-    cout << "|  2 - Layani Antrian Baru                                  |" << endl;
-    cout << "|  3 - Lihat History                                        |" << endl;
-    cout << "|  4 - Lihat Obat                                           |" << endl;
+    cout << "|  1 - Buat Antrian Baru                                         |" << endl;
+    cout << "|  2 - Layani Antrian Baru                                       |" << endl;
+    cout << "|  3 - Lihat History                                             |" << endl;
+    cout << "|  4 - Lihat Obat                                                |" << endl;
     cout << "-----------------------------------------------------------------" << endl;
     cout << "Pilih Fitur? "; int confirmation; cin >> confirmation;
 

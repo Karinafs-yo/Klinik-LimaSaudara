@@ -24,39 +24,38 @@ void createDummy(){
     newHistory -> nama_pasien = "Dummy";
     newHistory -> keluhan = "Dummy";
     newHistory -> is_bpjs= false;
-    head_history = newHistory;
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 3; j++) {
             newHistory->resep_obat[i][j] = "Dummy";
         }
     }
-
+    
+    head_history = newHistory;
     tail_history = newHistory;
 }
 
 void loadingMenu(string menuName){
     int repeatFor = 3;
     for(int i = 0; i < repeatFor; i++){
-        cout << "┌───────────────────────────────────────────────────────────────┐";
-        cout << "                   ";
-        cout << "                   " << menuName << ".";
-        cout << "                   ";
-        cout << "└───────────────────────────────────────────────────────────────┘";
+        cout << "-----------------------------------------------------------------" << endl;
+        cout << "                   " << endl;
+        cout << "                   " << menuName << "." << endl;
+        cout << "                   " << endl;
+        cout << "-----------------------------------------------------------------" << endl;
         this_thread::sleep_for(chrono::milliseconds(300));
         clearTerminal();
-        cout << "┌───────────────────────────────────────────────────────────────┐";
-        cout << "                   ";
-        cout << "                   " << menuName << "..";
-        
-        cout << "                   ";
-        cout << "└───────────────────────────────────────────────────────────────┘";
+        cout << "-----------------------------------------------------------------" << endl;
+        cout << "                   " << endl;
+        cout << "                   " << menuName << ".." << endl;
+        cout << "                   " << endl;
+        cout << "-----------------------------------------------------------------" << endl;
         this_thread::sleep_for(chrono::milliseconds(300));
         clearTerminal();
-        cout << "┌───────────────────────────────────────────────────────────────┐";
-        cout << "                   ";
-        cout << "                   " << menuName << "...";
-        cout << "                   ";
-        cout << "└───────────────────────────────────────────────────────────────┘";
+        cout << "-----------------------------------------------------------------" << endl;
+        cout << "                   " << endl;
+        cout << "                   " << menuName << "..." << endl;
+        cout << "                   " << endl;
+        cout << "-----------------------------------------------------------------" << endl;
         this_thread::sleep_for(chrono::milliseconds(300));
         clearTerminal();
     }
