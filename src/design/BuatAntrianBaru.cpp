@@ -1,6 +1,7 @@
 #include "menu.hpp"
 #include "antrian.hpp"
 #include "structs.hpp"
+#include "utils.hpp"
 
 void d_BuatAntrianBaru()
 {
@@ -21,6 +22,7 @@ void d_BuatAntrianBaru()
     }
     else
     {
-        cout << "Selesai Membuat Nomor Antrian!" << endl;
+        clearTerminal();
+        d_MenuUtama();
     }
 }

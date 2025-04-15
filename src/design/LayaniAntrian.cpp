@@ -8,7 +8,7 @@ void d_LayaniAntrian()
     antrian *temp  = new antrian();
     temp = findLastAntrian();
 
-    cout << "----------------------------------------------------------------";
+    cout << "----------------------------------------------------------------" << endl;
     cout << "               Layani Antrian ke-" << temp->no_antrian;
     cout << "   Nama      : "; cin >> temp -> nama_pasien;
     cout << "   Keluhan   : "; cin >> temp -> keluhan;
