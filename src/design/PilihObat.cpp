@@ -22,6 +22,10 @@ void d_PilihObat(antrian *temp)
     while (!obatFinded)
     {
         cout << "Masukkan Nama Obat? "; cin >> input_obat;
+        for (char& c : input_obat) {
+            c = tolower(c);
+        }
+        input_obat[0] = toupper(input_obat[0]);
         index_obat = cariObat(input_obat);
         if(index_obat >= 0){ obatFinded = true;
         } else clearOneLine();
