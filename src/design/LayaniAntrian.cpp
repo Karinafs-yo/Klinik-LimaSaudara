@@ -8,10 +8,10 @@ void d_LayaniAntrian()
     antrian *temp  = new antrian();
     temp = findLastAntrian();
 
-    cout << "----------------------------------------------------------------" << endl;
+    cout << "-----------------------------------------------------------------" << endl;
     cout << "               Layani Antrian ke-" << temp->no_antrian << endl;
-    cout << "   Nama      : "; cin >> temp -> nama_pasien;
-    cout << "   Keluhan   : "; cin >> temp -> keluhan;
+    cout << "   Nama      : "; cin >> temp -> nama_pasien; cout << endl;
+    cout << "   Keluhan   : "; cin >> temp -> keluhan; cout << endl;
     cout << "   Resep     : \n";
     if((sizeof(temp->resep_obat) / sizeof(temp->resep_obat[0])) < 1){
         d_PilihObat(temp);
@@ -20,5 +20,5 @@ void d_LayaniAntrian()
     }
     cout << "   ";
     cout << "                            " << (temp->is_bpjs ? "   BPJS  " : "Prioritas") << "                           " << endl;
-    cout << "└───────────────────────────────────────────────────────────────┘";
+    cout << "-----------------------------------------------------------------";
 }
