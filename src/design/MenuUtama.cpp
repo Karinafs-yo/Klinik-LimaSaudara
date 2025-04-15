@@ -5,7 +5,7 @@
 using namespace std;
 
 void d_MenuUtama(){
-    createDummy();
+    clearTerminal();
     cout << "------" << endl;
     cout << "| " << findLastAntrian() << " |" << endl;
     cout << "------" << endl;

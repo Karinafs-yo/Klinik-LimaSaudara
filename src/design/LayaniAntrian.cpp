@@ -13,12 +13,12 @@ void d_LayaniAntrian()
     cout << "   Nama      : "; cin >> temp -> nama_pasien; cout << endl;
     cout << "   Keluhan   : "; cin >> temp -> keluhan; cout << endl;
     cout << "   Resep     : \n";
-    if((sizeof(temp->resep_obat) / sizeof(temp->resep_obat[0])) < 1){
+    if(temp->banyak_resep < 1){
         d_PilihObat(temp);
     } else {
-        for (int i = 0; i < temp->banyak_resep; i++) cout << "   " << i + 1 << ". " << temp->resep_obat[i][0] << "(" << temp->resep_obat[i][1] << ")         Rp. " << temp->resep_obat[i][2] << endl;
+        cout << sizeof(temp->resep_obat) / sizeof(temp->resep_obat[0]);
     }
     cout << "   ";
     cout << "                            " << (temp->is_bpjs ? "   BPJS  " : "Prioritas") << "                           " << endl;
-    cout << "-----------------------------------------------------------------";
+    cout << "----------------------------------------------------------------";
 }
