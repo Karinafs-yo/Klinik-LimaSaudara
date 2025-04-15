@@ -9,7 +9,7 @@ void d_LayaniAntrian()
     temp = findLastAntrian();
 
     cout << "----------------------------------------------------------------" << endl;
-    cout << "               Layani Antrian ke-" << temp->no_antrian;
+    cout << "               Layani Antrian ke-" << temp->no_antrian << endl;
     cout << "   Nama      : "; cin >> temp -> nama_pasien;
     cout << "   Keluhan   : "; cin >> temp -> keluhan;
     cout << "   Resep     : \n";
