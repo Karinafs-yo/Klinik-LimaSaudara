@@ -5,7 +5,7 @@
 #include "structs.hpp"
 using namespace std;
 
-void createAntrian();
+string createAntrian(string isBPJS);
 antrian* findLastAntrian();
 
 #endif

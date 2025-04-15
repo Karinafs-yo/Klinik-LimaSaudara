@@ -1,12 +1,11 @@
 #include "antrian.hpp"
 #include "structs.hpp"
 
-void createAntrian(string isBPJS)
+string createAntrian(string isBPJS)
 {
-    
     antrian *newAntrian = new antrian;
 
-    if (isBPJS == "Ya")
+    if (isBPJS == "Ya" || isBPJS == "ya")
     {
         newAntrian->no_antrian = "B" + to_string(antrian_bpjs++);
         if (head_bpjs == NULL)
@@ -36,11 +35,14 @@ void createAntrian(string isBPJS)
             tail_prioritas = newAntrian;
         }
     }
-    cout << "No Antrian: " << newAntrian->no_antrian << endl;
+    return newAntrian->no_antrian;
 }
 
-antrian* findLastAntrian(){
-    if (head_prioritas != NULL) return head_prioritas;
-    if (head_bpjs != NULL) return head_bpjs;
+antrian *findLastAntrian()
+{
+    if (head_prioritas != NULL)
+        return head_prioritas;
+    if (head_bpjs != NULL)
+        return head_bpjs;
     return NULL;
 }
