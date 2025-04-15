@@ -5,6 +5,7 @@
 #include "structs.hpp"
 using namespace std;
 
+void d_MenuUtama();
 void d_BuatAntrianBaru();
 void d_LayaniAntrian();
 void d_LihatHistory(history *temp);
