@@ -5,16 +5,17 @@
 
 void d_BuatAntrianBaru()
 {
+    clearTerminal();
     string isBPJS;
     
     cout << "-------------------- Buat Antrian Baru --------------------" << endl;
-    cout << "BPJS (Ya/Tidak) = "; cin >> isBPJS;
+    cout << "Pengguna BPJS (Ya/Tidak)? "; cin >> isBPJS;
     
     string no_antrian = createAntrian(isBPJS);
-
-    cout << "No Antrian: " << no_antrian; cout << endl;
+    clearTerminal();
+    cout << endl << "-------------- Nomor Antrian Berhasil Dibuat! -------------" << endl;
+    cout << "                           " << no_antrian << "                                " << endl;
     cout << "-----------------------------------------------------------" << endl << endl;
-    cout << "-------------- Nomor Antrian Berhasil Dibuat! -------------" << endl;
     cout << "Apakah ingin membuat antrian baru lagi? (Ya/Tidak) = "; cin >> isBPJS;
     if (isBPJS == "Ya" || isBPJS == "ya")
     {

@@ -11,12 +11,14 @@ string createAntrian(string isBPJS)
         if (head_bpjs == NULL)
         {
             newAntrian->prev = tail_prioritas;
+            tail_prioritas->next = newAntrian;
             head_bpjs = newAntrian;
             tail_bpjs = newAntrian;
         }
         else
         {
             newAntrian->prev = tail_bpjs;
+            tail_bpjs -> next = newAntrian;
             tail_bpjs = newAntrian;
         }
     }
@@ -30,6 +32,7 @@ string createAntrian(string isBPJS)
         }
         else
         {
+            newAntrian->next = tail_prioritas -> next;
             tail_prioritas->next = newAntrian;
             newAntrian->prev = tail_prioritas;
             tail_prioritas = newAntrian;

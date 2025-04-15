@@ -9,8 +9,8 @@ void createDummy(){
     antrian *newAntrian = new antrian;
     newAntrian -> no_antrian = "A1";
     newAntrian -> is_bpjs= false;
-    head_bpjs = newAntrian;
-    tail_bpjs = newAntrian;
+    head_prioritas = newAntrian;
+    tail_prioritas = newAntrian;
     antrian_prioritas++;
 
     history *newHistory = new history;
@@ -44,7 +44,7 @@ void createDummy(){
 }
 
 void loadingMenu(string menuName){
-    int repeatFor = 3;
+    int repeatFor = 2;
     for(int i = 0; i < repeatFor; i++){
         clearTerminal();
         cout << "-----------------------------------------------------------------" << endl;

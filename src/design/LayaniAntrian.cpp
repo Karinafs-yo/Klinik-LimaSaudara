@@ -2,6 +2,7 @@
 #include "structs.hpp"
 #include "antrian.hpp"
 #include "utils.hpp"
+#include <string>
 
 void d_LayaniAntrian()
 {
@@ -17,7 +18,7 @@ void d_LayaniAntrian()
 
     cout << "   Keluhan   : "; if (temp->keluhan != ""){ 
         cout << temp->keluhan << endl; 
-    } else cin >> temp -> keluhan; 
+    } else cin >> temp->keluhan;
 
     cout << "   Resep     : \n";
     if(temp->banyak_resep < 1){

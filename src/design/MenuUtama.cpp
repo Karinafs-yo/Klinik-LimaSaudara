@@ -8,14 +8,12 @@ void d_MenuUtama(){
     clearTerminal();
     antrian *temp = findLastAntrian();
     string firstLine = "", secondLine = "", thirdLine = "";
-    //?Tolong perbaiki ini 😑
-    // while(true){
-    //     cout << temp -> no_antrian;
-    //     firstLine += "-----";
-    //     secondLine +="|  " + temp ->no_antrian + " |";
-    //     thirdLine += "-----";
-    //     temp = temp -> next;
-    // }
+    while(temp != NULL){
+        firstLine += "  -------";
+        secondLine +="  |  " + temp ->no_antrian + " |";
+        thirdLine += "  -------";
+        temp = temp -> next;
+    }
 
     cout << firstLine << endl << secondLine << endl << thirdLine;
 

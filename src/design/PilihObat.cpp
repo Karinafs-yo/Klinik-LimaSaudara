@@ -43,6 +43,8 @@ void d_PilihObat(antrian *temp)
     temp -> resep_obat[temp -> banyak_resep][2] = to_string(total_harga);
     temp -> banyak_resep++;
 
+    stok[index_obat] -= input_pembelian;
+
     cout << "\nLanjut Mengisi? (y/n): "; string konfirmasi; cin >> konfirmasi;
     if (konfirmasi == "y"){
         d_PilihObat(temp);
