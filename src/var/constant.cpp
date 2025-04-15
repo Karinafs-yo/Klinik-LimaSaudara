@@ -41,10 +41,6 @@ int stok[50] = {
 
 int cariObat(string namaObat) { 
     for (int i = 0; i < 50; i++) {
-        if (obat[i] == namaObat) return i
+        if (obat[i] == namaObat) return i;
     } return -1;
-}
-
-int obat::getStok(int index) {
-    return stok[index];
 }
