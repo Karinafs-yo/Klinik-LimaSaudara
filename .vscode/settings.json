@@ -1,10 +1,10 @@
 {
     "files.associations": {
-        "*.embeddedhtml": "html",
-        "*.ejs": "html",
-        "iostream": "cpp",
-        "xstring": "cpp",
-        "ostream": "cpp",
-        "thread": "cpp"
+        "*.embeddedhtml": "html",  // File dengan ekstensi .embeddedhtml diperlakukan sebagai file HTML
+        "*.ejs": "html", // File .ejs (Embedded JavaScript) juga dianggap HTML (karena strukturnya mirip HTML)
+        "iostream": "cpp", // File bernama iostream diperlakukan sebagai file C++
+        "xstring": "cpp", // File xstring juga sebagai C++
+        "ostream": "cpp", // Sama, dianggap file C++
+        "thread": "cpp" // File thread dianggap file C++
     }
 }

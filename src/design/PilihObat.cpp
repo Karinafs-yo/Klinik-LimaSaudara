@@ -15,7 +15,7 @@ void d_PilihObat(antrian *temp)
         }
     }
     cout << "-------------------------------------------------------------" << endl;
-    //info obat
+    //info obat berdasarkan nama
     bool obatFinded = false;
     while (!obatFinded)
     {

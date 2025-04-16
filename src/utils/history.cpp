@@ -2,13 +2,15 @@
 
 void formatInvoice(history *temp)
 {
-    cout << temp -> no_antrian;
+    cout << temp -> no_antrian; // Menampilkan nomor antrian 
     cout << "=========== Antrian " << temp->no_antrian << "==============" << endl;
     cout << "Nama Pasien: " << temp->nama_pasien << endl;
     cout << "Keluhan: " << temp->keluhan << endl;
     cout << "Resep: " << endl;
     cout << "" << endl;
-    for (int i = 0; i < 10; i++)
+
+    // Melakukan loop untuk menampilkan maksimal 10 resep obat
+    for (int i = 0; i < 10; i++) 
     {
         if (temp->resep_obat[i][0] != "")
         {
