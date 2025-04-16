@@ -35,7 +35,16 @@ void d_PilihObat(antrian *temp)
     cout << "Stok Obat: " << stok[index_obat] << endl;
     cout << "Harga Obat: " << harga[index_obat] << endl << endl;
 
-    cout << "Banyak Pembelian? "; cin >> input_pembelian;
+    bool outOfStock = true;
+    while (outOfStock != false) {
+        cout << "Banyak Pembelian? "; cin >> input_pembelian;
+        if (stok[index_obat] - input_pembelian < 0) { cout << "Obat tidak punya stok sebanyak itu. \n";
+        } else { outOfStock = false; }
+    }
+
+    // cout << "Banyak Pembelian? "; cin >> input_pembelian;
+
+
     int total_harga = input_pembelian * harga[index_obat];
     cout << "Total Harga: " << total_harga << endl;
     temp -> resep_obat[temp -> banyak_resep][0] = input_obat;
