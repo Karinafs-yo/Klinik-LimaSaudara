@@ -2,6 +2,8 @@
 #include "structs.hpp"
 #include "menu.hpp"
 #include "utils.hpp"
+#include <thread>
+#include <chrono>
 
 void d_PilihObat(antrian *temp)
 {
@@ -38,7 +40,12 @@ void d_PilihObat(antrian *temp)
     bool outOfStock = true;
     while (outOfStock != false) {
         cout << "Banyak Pembelian? "; cin >> input_pembelian;
-        if (stok[index_obat] - input_pembelian < 0) { cout << "Obat tidak punya stok sebanyak itu. \n";
+        if (stok[index_obat] - input_pembelian < 0) { // mengecek untuk pembelian obat yang melebihi stok obat
+            cout << "Obat tidak punya stok sebanyak itu."; 
+            clearOneLine();
+        } else if (input_pembelian == 0) { // jika input-nya 0, CLI akan kembali ke menu pilih obat
+            d_PilihObat(temp); 
+            break;
         } else { outOfStock = false; }
     }
 
@@ -46,7 +53,7 @@ void d_PilihObat(antrian *temp)
 
 
     int total_harga = input_pembelian * harga[index_obat];
-    cout << "Total Harga: " << total_harga << endl;
+    cout << "\n\nTotal Harga: " << total_harga << endl;
     temp -> resep_obat[temp -> banyak_resep][0] = input_obat;
     temp -> resep_obat[temp -> banyak_resep][1] = to_string(input_pembelian);
     temp -> resep_obat[temp -> banyak_resep][2] = to_string(total_harga);
