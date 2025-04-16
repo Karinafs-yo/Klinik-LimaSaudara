@@ -38,7 +38,7 @@ void d_PilihObat(antrian *temp)
     cout << "Harga Obat: " << harga[index_obat] << endl << endl;
 
     bool outOfStock = true;
-    while (outOfStock != false) {
+    while (outOfStock) {
         cout << "Banyak Pembelian? "; cin >> input_pembelian;
         if (stok[index_obat] - input_pembelian < 0) { // mengecek untuk pembelian obat yang melebihi stok obat
             cout << "Obat tidak punya stok sebanyak itu."; 
