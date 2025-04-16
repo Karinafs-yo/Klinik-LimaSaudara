@@ -2,12 +2,21 @@
 #include "structs.hpp"
 #include "history.hpp"
 #include "utils.hpp"
+#include <thread>
+#include <chrono>
 
 void d_LihatHistory(history *temp) // Fungsi untuk melihat riwayat layanan, menerima pointer ke struct 'history'
 {
     clearTerminal();
     if (temp == NULL) temp = tail_history; // Jika 'temp' kosong (NULL), maka kita mulai dari antrian terakhir (tail)
-
+    if (temp == NULL){
+        cout << "-----------------------------------------------------------------" << endl;
+        cout << "\n                       Tidak ada History                       \n" << endl;
+        cout << "----------------------------------------------------------------" << endl;
+        
+        this_thread::sleep_for(chrono::milliseconds(600));
+        d_MenuUtama();
+    }
     // Menampilkan informasi riwayat
     cout << "-----------------------------------------------------------------" << endl;
     cout << "   No Antrian      : " << temp->no_antrian << endl;

@@ -29,6 +29,7 @@ string createAntrian(string isBPJS)
         newAntrian->no_antrian = "A" + to_string(antrian_prioritas++);
         if (head_prioritas == NULL)
         {
+            if(head_bpjs != NULL) newAntrian -> next = head_bpjs;
             head_prioritas = newAntrian;
             tail_prioritas = newAntrian;
         }
@@ -69,6 +70,7 @@ void backupAntrian(antrian *hapus){
         hapus->next->prev = NULL;
         hapus->next->is_bpjs ? head_bpjs = hapus->next : head_prioritas = hapus -> next;
     }else hapus ->is_bpjs ? head_bpjs = NULL : head_prioritas = NULL;
+    cout << "DSAJDNAKJDA";
     tail_history = newHistory;
     delete hapus;
 }
