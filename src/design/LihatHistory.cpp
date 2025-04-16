@@ -11,9 +11,9 @@ void d_LihatHistory(history *temp) // Fungsi untuk melihat riwayat layanan, mene
     // Menampilkan informasi riwayat
     cout << "-----------------------------------------------------------------" << endl;
     cout << "   No Antrian      : " << temp->no_antrian << endl;
-    cout << "   Antrian " << (temp->is_bpjs ? "BPJS" : "Prioritas") << endl;
+    cout << "   Antrian         : " << (temp->is_bpjs ? "BPJS" : "Prioritas") << endl;
     cout << "   Nama Pasien     : " << temp->nama_pasien << endl;
-    cout << "   Keluhan Pasien  : " << temp->keluhan << endl;
+    cout << "   Keluhan Pasien  : " << temp->keluhan << endl << endl;
     cout << "   Resep Obat: " << endl;
     
        // Loop untuk menampilkan resep obat yang diberikan
@@ -24,7 +24,7 @@ void d_LihatHistory(history *temp) // Fungsi untuk melihat riwayat layanan, mene
     cout << "-----------------------------------------------------------------" << endl;
     cout << "|  1 - Maju List                                                 |" << endl;
     cout << "|  2 - Mundur List                                               |" << endl;
-    cout << "|  3 - Kembali ke Menu Utama                                               |" << endl;
+    cout << "|  3 - Kembali ke Menu Utama                                     |" << endl;
     cout << "-----------------------------------------------------------------" << endl;
     while (true)
     {
