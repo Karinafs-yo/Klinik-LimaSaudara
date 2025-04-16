@@ -7,8 +7,9 @@
 void d_LayaniAntrian()
 {
     antrian *temp  = new antrian(); // Alokasi memori untuk pointer antrian baru
-    temp = findLastAntrian();  // Mendapatkan pointer ke antrian terakhir
-
+    temp = findLastAntrian();
+      // Mendapatkan pointer ke antrian terakhir
+    if(temp == NULL) return d_MenuUtama();
     cout << "-----------------------------------------------------------------" << endl;
     cout << "                       Layani Antrian ke-" << temp->no_antrian << endl;
     cout << "   Nama      : "; if (temp->nama_pasien != ""){ 

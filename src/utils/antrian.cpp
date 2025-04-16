@@ -43,10 +43,8 @@ string createAntrian(string isBPJS)
 
 antrian *findLastAntrian()
 {
-    if (head_prioritas != NULL)
-        return head_prioritas;
-    if (head_bpjs != NULL)
-        return head_bpjs;
+    if (head_prioritas != NULL) return head_prioritas;
+    if (head_bpjs != NULL) return head_bpjs;
     return NULL;
 }
 
