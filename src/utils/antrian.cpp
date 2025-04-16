@@ -64,13 +64,13 @@ void backupAntrian(antrian *hapus){
         newHistory->resep_obat[i][2] = hapus->resep_obat[i][2];        
     }
 
+    
     newHistory->prev = tail_history;
-    tail_history->next = newHistory;
+    if (tail_history != NULL) { tail_history->next = newHistory; }
     if(hapus -> next){
         hapus->next->prev = NULL;
         hapus->next->is_bpjs ? head_bpjs = hapus->next : head_prioritas = hapus -> next;
     }else hapus ->is_bpjs ? head_bpjs = NULL : head_prioritas = NULL;
-    cout << "DSAJDNAKJDA";
     tail_history = newHistory;
     delete hapus;
 }

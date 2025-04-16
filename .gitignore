@@ -2,7 +2,6 @@ index.exe
 clinicApp.exe
 test.cpp
 test.exe
-.vscode
 
 *.o
 nul
