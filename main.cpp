@@ -6,6 +6,6 @@ using namespace std;
 
 int main()
 {
-    createDummy();
+    // createDummy();
     d_MenuUtama();
 }

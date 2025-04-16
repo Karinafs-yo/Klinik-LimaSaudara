@@ -10,8 +10,10 @@ string createAntrian(string isBPJS)
         newAntrian->no_antrian = "B" + to_string(antrian_bpjs++);
         if (head_bpjs == NULL)
         {
-            newAntrian->prev = tail_prioritas;
-            tail_prioritas->next = newAntrian;
+            if(tail_prioritas != NULL){
+                newAntrian->prev = tail_prioritas;
+                tail_prioritas->next = newAntrian;
+            }
             head_bpjs = newAntrian;
             tail_bpjs = newAntrian;
         }
