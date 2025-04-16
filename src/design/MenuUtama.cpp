@@ -4,18 +4,20 @@
 #include "utils.hpp"
 using namespace std;
 
-void d_MenuUtama(){
+void d_MenuUtama()
+{
     clearTerminal();
     antrian *temp = findLastAntrian();
     string firstLine = "", secondLine = "", thirdLine = "";
-    while(temp != NULL){
+    while (temp != NULL)
+    {
         firstLine += "  ------";
-        secondLine +="  | " + temp->no_antrian + " |";
+        secondLine += "  | " + temp->no_antrian + " |";
         thirdLine += "  ------";
         temp = temp->next;
     }
-
-    cout << firstLine << endl << secondLine << endl << thirdLine;
+    if (firstLine != "")
+        cout << firstLine << endl << secondLine << endl << thirdLine;
 
     cout << endl;
     cout << "-----------------------------------------------------------------" << endl;
@@ -25,7 +27,9 @@ void d_MenuUtama(){
     cout << "|  4 - Lihat Obat                                               |" << endl;
     cout << "|  5 - Keluar Program                                           |" << endl;
     cout << "-----------------------------------------------------------------" << endl;
-    cout << "Pilih Fitur? "; int confirmation; cin >> confirmation;
+    cout << "Pilih Fitur? ";
+    int confirmation;
+    cin >> confirmation;
 
     switch (confirmation)
     {

@@ -6,6 +6,7 @@
 
 void d_LayaniAntrian()
 {
+    clearTerminal();
     antrian *temp  = new antrian(); // Alokasi memori untuk pointer antrian baru
     temp = findLastAntrian();
       // Mendapatkan pointer ke antrian terakhir

@@ -66,7 +66,7 @@ void backupAntrian(antrian *hapus){
     if(hapus -> next){
         hapus->next->prev = NULL;
         hapus->next->is_bpjs ? head_bpjs = hapus->next : head_prioritas = hapus -> next;
-    }
+    }else hapus ->is_bpjs ? head_bpjs = NULL : head_prioritas = NULL;
     tail_history = newHistory;
     delete hapus;
 }
