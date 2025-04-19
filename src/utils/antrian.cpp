@@ -5,7 +5,7 @@ string createAntrian(string isBPJS)
 {
     antrian *newAntrian = new antrian;
 
-    if (isBPJS == "Ya" || isBPJS == "ya")
+    if (isBPJS == "Y" || isBPJS == "y")
     {
         newAntrian->no_antrian = "B" + to_string(antrian_bpjs++);
         newAntrian->is_bpjs = true;
@@ -25,8 +25,9 @@ string createAntrian(string isBPJS)
             tail_bpjs->next = newAntrian;
             tail_bpjs = newAntrian;
         }
+        return newAntrian->no_antrian;
     }
-    else
+    else if (isBPJS == "N" || isBPJS == "n")
     {
         newAntrian->no_antrian = "A" + to_string(antrian_prioritas++);
         newAntrian->is_bpjs = false;
@@ -44,8 +45,9 @@ string createAntrian(string isBPJS)
             newAntrian->prev = tail_prioritas;
             tail_prioritas = newAntrian;
         }
+        return newAntrian->no_antrian;
     }
-    return newAntrian->no_antrian;
+    return 0;
 }
 
 antrian *findLastAntrian()
