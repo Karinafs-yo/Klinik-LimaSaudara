@@ -2,24 +2,40 @@
 #include "structs.hpp"
 #include "antrian.hpp"
 #include "utils.hpp"
+#include <limits>
 #include <string>
+#include <thread>
+#include <chrono>
 
 void d_LayaniAntrian()
 {
     clearTerminal();
-    antrian *temp  = new antrian(); // Alokasi memori untuk pointer antrian baru
-    temp = findLastAntrian();
-      // Mendapatkan pointer ke antrian terakhir
-    if(temp == NULL) return d_MenuUtama();
+    // antrian *temp  = new antrian(); // Alokasi memori untuk pointer antrian baru
+    // temp = findLastAntrian(); // Mendapatkan pointer ke antrian terakhir
+    antrian *temp = findLastAntrian(); 
+
+    if(temp == NULL) { 
+        cout << "Tidak ada antrian yang tersedia. Mengembalikan Anda ke menu utama...";
+        this_thread::sleep_for(chrono::milliseconds(1000));
+        return;
+    }
+
     cout << "-----------------------------------------------------------------" << endl;
     cout << "                       Layani Antrian ke-" << temp->no_antrian << endl;
-    cout << "   Nama      : "; if (temp->nama_pasien != ""){ 
-        cout << temp->nama_pasien << endl; 
-    } else cin >> temp -> nama_pasien; 
+    
+    if (temp->nama_pasien != ""){ 
+        cout << "   Nama      : " << temp->nama_pasien << endl; 
+    } else {
+        cout << "   Nama      : ";
+        getline(cin, temp->nama_pasien);
+    }
 
-    cout << "   Keluhan   : "; if (temp->keluhan != ""){ 
-        cout << temp->keluhan << endl; 
-    } else cin >> temp->keluhan;
+    if (temp->keluhan != ""){ 
+        cout << "   Keluhan   : " << temp->keluhan << endl; 
+    } else {
+        cout << "   Keluhan   : ";
+        getline(cin, temp->keluhan);
+    }
 
     cout << "   Resep     : \n";
     // Cek apakah array resep_obat kosong atau tidak
@@ -32,16 +48,19 @@ void d_LayaniAntrian()
                 cout << "   " << i + 1 << ". " << temp->resep_obat[i][0] << "(" << temp->resep_obat[i][1] << ")         Rp. " << temp -> resep_obat[i][2] << endl;
             }
         }
+        cout << "\n\n";
+        cout << "                       " << (temp->is_bpjs ? "   BPJS  " : "Prioritas") << "                           " << endl;
+        cout << "----------------------------------------------------------------";
+
+        backupAntrian(temp);
+
+        cout << "\n\n----------------------------------------------------------------" << endl;
+        cout << "                       Klik 1 untuk Kembali                     " << endl;
+        cout << "-------------------------------------------------------- Ketik: "; 
     }
-    cout << "\n\n";
-    cout << "                       " << (temp->is_bpjs ? "   BPJS  " : "Prioritas") << "                           " << endl;
-    cout << "----------------------------------------------------------------";
+    
+    string c; 
+    getline(cin, c);
 
-    backupAntrian(temp);
-
-    cout << "\n\n----------------------------------------------------------------" << endl;
-    cout << "                       Klik 1 untuk Kembali                     " << endl;
-    cout << "-------------------------------------------------------- Ketik: "; int c; cin >> c; c ? d_MenuUtama() : d_MenuUtama(); 
-
-
+    return;
 }

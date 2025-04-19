@@ -64,7 +64,8 @@ void d_PilihObat(antrian *temp)
     cout << "\nLanjut Mengisi? (y/n): "; string konfirmasi; cin >> konfirmasi;
     if (konfirmasi == "y"){
         d_PilihObat(temp);
-    }else{
+    } else {
         d_LayaniAntrian();
+        return;
     }
 }

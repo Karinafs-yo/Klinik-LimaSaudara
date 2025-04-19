@@ -11,7 +11,9 @@ void d_MenuUtama()
 {
     while (true) {
         clearTerminal();
+        
         antrian *temp = findLastAntrian();
+
         string firstLine = "", secondLine = "", thirdLine = "";
         while (temp != NULL)
         {
@@ -20,6 +22,7 @@ void d_MenuUtama()
             thirdLine += "  ------";
             temp = temp->next;
         }
+
         if (firstLine != "")
             cout << firstLine << endl << secondLine << endl << thirdLine;
 

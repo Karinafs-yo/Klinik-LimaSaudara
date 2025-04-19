@@ -2,10 +2,14 @@
 #include "antrian.hpp"
 #include "structs.hpp"
 #include "utils.hpp"
+#include <limits>
 
 void d_BuatAntrianBaru()
 {
     clearTerminal();
+
+    // cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
     string isBPJS;
     
     cout << "-------------------- Buat Antrian Baru --------------------" << endl;
@@ -24,6 +28,6 @@ void d_BuatAntrianBaru()
     else
     {
         clearTerminal();
-        d_MenuUtama();
+        return;
     }
 }
