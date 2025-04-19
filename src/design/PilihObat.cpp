@@ -53,7 +53,7 @@ void d_PilihObat(antrian *temp)
 
 
     int total_harga = input_pembelian * harga[index_obat];
-    cout << "\n\nTotal Harga: " << total_harga << endl;
+    cout << "\nTotal Harga: " << total_harga << endl;
     temp -> resep_obat[temp -> banyak_resep][0] = input_obat;
     temp -> resep_obat[temp -> banyak_resep][1] = to_string(input_pembelian);
     temp -> resep_obat[temp -> banyak_resep][2] = to_string(total_harga);
@@ -61,11 +61,18 @@ void d_PilihObat(antrian *temp)
 
     stok[index_obat] -= input_pembelian;
 
-    cout << "\nLanjut Mengisi? (y/n): "; string konfirmasi; cin >> konfirmasi;
-    if (konfirmasi == "y"){
-        d_PilihObat(temp);
-    } else {
-        d_LayaniAntrian();
-        return;
+    while (true){
+        cout << "\nLanjut Mengisi? (Y/n): "; string konfirmasi; cin >> konfirmasi;
+        if (konfirmasi == "Y" || konfirmasi == "y"){
+            d_PilihObat(temp);
+            break;
+        } else if (konfirmasi == "N" || konfirmasi == "n") {
+            d_LayaniAntrian();
+            return;
+        } else {
+            cout << "Tolong masukkan input yang valid.";
+            clearOneLine();
+            clearOneLine();
+        }
     }
 }
