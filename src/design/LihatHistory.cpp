@@ -12,10 +12,10 @@ void d_LihatHistory(history *temp) // Fungsi untuk melihat riwayat layanan, mene
     if (temp == NULL){
         cout << "-----------------------------------------------------------------" << endl;
         cout << "\n                       Tidak ada History                       \n" << endl;
-        cout << "----------------------------------------------------------------" << endl;
+        cout << "-----------------------------------------------------------------" << endl;
         
-        this_thread::sleep_for(chrono::milliseconds(600));
-        d_MenuUtama();
+        this_thread::sleep_for(chrono::milliseconds(1000));
+        return;
     }
     // Menampilkan informasi riwayat
     cout << "-----------------------------------------------------------------" << endl;
