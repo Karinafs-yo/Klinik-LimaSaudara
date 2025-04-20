@@ -32,7 +32,8 @@ void d_MenuUtama()
         cout << "|  2 - Layani Antrian Baru                                      |" << endl;
         cout << "|  3 - Lihat History                                            |" << endl;
         cout << "|  4 - Lihat Obat                                               |" << endl;
-        cout << "|  5 - Keluar Program                                           |" << endl;
+        cout << "|  5 - Atur Stok Obat                                           |" << endl;
+        cout << "|  6 - Keluar Program                                           |" << endl;
         cout << "-----------------------------------------------------------------" << endl;
         cout << "Pilih Fitur? ";
 
@@ -68,6 +69,10 @@ void d_MenuUtama()
             d_LihatObat();
             break;
         case 5:
+            loadingMenu("Atur Stok Obat");;
+            d_AturStok();
+            break;
+        case 6:
             loadingMenu("Exiting Program");
             return;
         default:
