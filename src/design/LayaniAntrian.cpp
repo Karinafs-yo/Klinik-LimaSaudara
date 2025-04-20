@@ -2,6 +2,7 @@
 #include "structs.hpp"
 #include "antrian.hpp"
 #include "utils.hpp"
+#include "constant.hpp"
 #include <limits>
 #include <string>
 #include <thread>
@@ -61,6 +62,8 @@ void d_LayaniAntrian()
     
     string c; 
     getline(cin, c);
+
+    saveData("src/var/obat.csv", obat, harga, stok);
 
     return;
 }
