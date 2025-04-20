@@ -23,7 +23,7 @@ void d_PilihObat(antrian *temp)
     bool obatFinded = false;
     while (!obatFinded)
     {
-        cout << "Masukkan Nama Obat? "; cin >> input_obat;
+        cout << "Masukkan Nama Obat? "; getline(cin, input_obat);
         for (char& c : input_obat) {
             c = tolower(c);
         }
@@ -51,7 +51,6 @@ void d_PilihObat(antrian *temp)
 
     // cout << "Banyak Pembelian? "; cin >> input_pembelian;
 
-
     int total_harga = input_pembelian * harga[index_obat];
     cout << "\nTotal Harga: " << total_harga << endl;
     temp -> resep_obat[temp -> banyak_resep][0] = input_obat;
@@ -60,6 +59,7 @@ void d_PilihObat(antrian *temp)
     temp -> banyak_resep++;
 
     stok[index_obat] -= input_pembelian;
+    saveData("src/var/obat.csv", obat, harga, stok);
 
     while (true){
         cout << "\nLanjut Mengisi? (Y/n): "; string konfirmasi; cin >> konfirmasi;
